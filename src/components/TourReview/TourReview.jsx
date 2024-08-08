@@ -23,7 +23,7 @@ const TourReview = ({ tour }) => {
 
       const handleReviewChange = (e) => {
 
-        // setReview((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+        setReview((prev) => ({ ...prev, [e.target.id]: e.target.value }));
 
         setReview(review);
 
