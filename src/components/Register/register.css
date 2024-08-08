@@ -1,0 +1,39 @@
+.register {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    
+}
+
+.register img {
+
+    width: 300px;
+    height: 400px;
+}
+
+.registeruser img {
+
+    width: 60px;
+    height: 50px;
+    margin-left: 80px;
+}
+
+.registeruser {
+
+    background-color: #FAA935;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+form input {
+
+    border: none;
+    border-radius: 5px;
+}
+
+form input:focus {
+
+    outline: 1px solid #FAA935;
+}
+

@@ -1,0 +1,7 @@
+.hero_one:hover, .hero_two:hover, .hero_three:hover, 
+.hero_four:hover,.hero_five:hover,.hero_six:hover,
+.hero_seven:hover,.hero_eight:hover
+{
+    transform: scale(1.1);
+}
+

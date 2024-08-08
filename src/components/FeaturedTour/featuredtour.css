@@ -1,0 +1,31 @@
+.explore{
+
+    border: 1px solid #FAA935;
+    width: 80px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #FAA935;
+    color:antiquewhite;
+}
+
+.featured-text {
+
+        position: absolute;
+        top: 179px;
+        right: 0px;
+        background-color: #FAA935;
+        color: white;
+        padding: 4px 8px;
+        font-size: 14px;
+        font-weight: bold;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+}
+
+.searchinput {
+
+    margin-right: 10px;
+    color: #FAA935;
+}

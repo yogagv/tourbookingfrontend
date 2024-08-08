@@ -1,0 +1,99 @@
+.tourimage {
+
+    border-radius: 5px;
+    width: 90%;
+    height: 500px;
+
+}
+
+.tourdata, .tourinfo {
+
+    border: 1px solid #F1F2F4;
+    border-radius: 5px;
+    height: 280px;
+}
+
+.star {
+
+    color: #FAA935;
+}
+
+.tourreview {
+
+    border: 1px solid #F1F2F4;
+    border-radius: 5px;
+    height: 480px;
+}
+
+.tourinfo {
+
+    border: 1px soild #F1F2F4;
+    border-radius: 5px;
+    height: 650px;
+}
+
+.userinfo {
+
+    border: 1px solid #F1F2F4;
+    height: 260px;
+}
+
+.userinfo input {
+
+    border-bottom: 2px solid #F1F2F4;
+}
+
+.searchinput {
+
+    color: #FAA935;
+}
+
+.rating > label {
+  color: #90A0A3;
+  float: right;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 2em;
+  font-family: FontAwesome;
+  content: "\f005";
+  display: inline-block;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #F79426;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FECE31;
+}
+
+.bookingdetails {
+
+    margin-top: 65px;
+}
+
+.bookingamt {
+
+    margin-left: 150px;
+}
+
+.bookingfee {
+
+    margin-left: 142px;
+}
+
+.totalamt {
+
+    margin-left: 210px;
+}

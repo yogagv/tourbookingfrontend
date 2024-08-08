@@ -1,0 +1,56 @@
+.tourfooter img{
+
+    width: 80px;
+    height: 30px;
+
+}
+
+.contact {
+
+    color: #FAA935;
+}
+
+.footer_one {
+
+    background-color: #CAE5F4;
+}
+
+.footer_one h2 {
+
+    margin-top: 60px;
+    
+}
+
+.subscribe-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+    width: 450px;
+    height: 60px;
+  }
+  
+  .subscribe-button {
+    background-color: #ffa726; /* Orange button */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 60px;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #fb8c00; /* Darker orange on hover */
+  }
+
+  .scroll {
+
+    scroll-behavior: top;
+
+  }

@@ -1,0 +1,114 @@
+.explore{
+
+    border: 1px solid #FAA935;
+    width: 80px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #FAA935;
+    color:antiquewhite;
+}
+
+.image-container {
+    
+    width: 100%;
+    height: 376px;
+    background-image: url('../../assets/images/tour.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.7px);
+     /* Adjust as needed */
+  }
+
+.text-overlay {
+
+    position: absolute;
+    bottom: 170px;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px 20px;
+    font-size: 40px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.searchform {
+
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 50px;
+    height: 100px;
+    
+  
+}
+
+.search {
+
+    width: 43px;
+    height: 48px;
+    margin-top: 12px;
+    margin-left: 50px;
+    background-color: #FAA935;
+    border: none;
+}
+
+.searchform input {
+
+    margin-left: 38px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    width: 170px;
+}
+
+.searchform input:focus{
+
+    outline: 2px solid #FAA935;
+}
+
+.searchinput-name{
+
+    margin-left: 10px;
+
+}
+
+.searchinput-icon {
+
+    color: red;
+    margin-left: 10px;
+   
+}
+
+.line {
+
+    border-right: 2px solid grey;
+}
+
+.searchinput-iconsearch    {
+
+background-color: #FAA935;
+font-size: 1.6;
+border: 1px solid #FAA935; 
+padding: 10px;
+color: white; 
+margin-left: 0px;
+margin-top: 1px;
+border-top-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.title {
+
+    text-decoration: none;
+}
+
+.searchinput {
+
+    margin-right: 10px;
+    color: #FAA935;
+}

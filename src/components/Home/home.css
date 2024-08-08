@@ -1,0 +1,126 @@
+.hero-image img , video{
+
+    height: 450px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #FAA935;
+
+}
+
+.heropara img{
+
+    height: 35px;
+    width: 35px;
+}
+
+.hero-para {
+
+    border: 1px solid #FAA935;
+    width: 200px;
+    padding: 6px;
+    border-radius: 20px;
+    background-color: #FAA935;
+    color:antiquewhite;
+    
+}
+
+.memory {
+
+    color: #FAA935;
+}
+
+
+.searchform {
+
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 50px;
+    height: 100px;
+    
+  
+}
+
+.search {
+
+    width: 43px;
+    height: 48px;
+    margin-top: 12px;
+    margin-left: 50px;
+    background-color: #FAA935;
+    border: none;
+}
+
+.searchform input {
+
+    margin-left: 38px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    width: 170px;
+}
+
+.searchform input:focus{
+
+    outline: 2px solid #FAA935;
+}
+
+.searchinput-name{
+
+    margin-left: 10px;
+
+}
+
+.searchinput-icon {
+
+    color: red;
+    margin-left: 10px;
+   
+}
+
+.line {
+
+    border-right: 2px solid grey;
+}
+
+.searchinput-iconsearch    {
+
+background-color: #FAA935;
+font-size: 1.6;
+border: 1px solid #FAA935; 
+padding: 20px;
+color: white; 
+margin-left: 0px;
+top: 250px;
+border-top-left-radius: 5px;
+border-bottom-right-radius: 5px;
+
+}
+
+.weather {
+
+    /* border-right: 1px solid #FAA935;
+    border-bottom: 1px solid #FAA935; */
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 1px 1px #FAA935;
+    padding: 5px;
+}
+
+.weather img {
+    
+    background-color: #FAA935;
+    height: 50px;
+    border-radius: 50px;
+    width: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+
+
+
