@@ -11,31 +11,33 @@ const GetReview = ({tour}) => {
 
     const {
 
-        data : tourReview,
+        data : tourData,
         loading,
         error,
     } = useFetch(`${BASE_URL}/review/getReview/${id}`);
 
+    const getLatestReview = (review) => {
+      if (!review || review.length === 0) return null;     
+      const sortedReviews = review.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      return sortedReviews[0];
+    }
+      const latestReview = getLatestReview(tourData);
+
   return (
     <div>
-        {loading && <h1>Loading</h1>}
-        {error && <h1>Error</h1>}
-        {
-        Object.values(tourReview).length === 0 ? (
-          <p>No reviews yet.</p>
-        ) : (
-          <ul>
-            {
-            Object.values(tourReview).map((review) => (
-              <li key={review._id} className='list'>
-                <img src={avatar} className='avatar' alt="" />
-                <strong>{review.name}</strong> - {review.review} ({review.rating})
-              </li>
-            ))}
-          </ul>
-        )}
-    </div>
+            {loading && <h1>Loading</h1>}
+            {error && <h1>Error</h1>}
+            {!latestReview ? (
+                <p>No reviews yet.</p>
+            ) : (
+                <div className='latest-review'>
+                    <img src={avatar} className='avatar' alt="" />
+                    <strong>{latestReview.name}</strong> - {latestReview.reviewText} ({latestReview.rating})
+                </div>
+            )}
+        </div>
   )
 }
+
 
 export default GetReview
