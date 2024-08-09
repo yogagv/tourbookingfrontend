@@ -7,14 +7,15 @@ import ReactStars from 'react-stars';
 import GetReview from '../GetReview/GetReview'
 
 
+
 const TourReview = ({ tour }) => {
 
-    const [review, setReview] = useState([{
+    const [tourReview, setTourReview] = useState({
 
         review: '',
         rating: 0
     
-      }])
+      })
 
       console.log(typeof review)
 
@@ -23,11 +24,15 @@ const TourReview = ({ tour }) => {
 
       const handleReviewChange = (e) => {
 
-        setReview((prev) => ({ ...prev, [e.target.id]: e.target.value }));
-
-        setReview(review);
+        setTourReview((prev) => ({ ...prev, [e.target.id]: e.target.value }));
 
     }
+
+    const handleRatingChange = (newRating) => {
+
+      setTourReview((prev) => ({ ...prev, rating: newRating }));
+
+  }
 
     const { id } = useParams();
 
@@ -43,15 +48,16 @@ const TourReview = ({ tour }) => {
             }
                 
 
-            const res = await fetch(`${BASE_URL}/review/tourreview/${id}`, {
+              const res = await fetch(`${BASE_URL}/review/tourreview/${id}`, {
               method: "POST",
               headers: {
                   "Content-type": "application/json",
                   Authorization: `Bearer ${token}`, 
               },
-              body: JSON.stringify(review),
-                
-            })
+              body: JSON.stringify(tourReview),                
+            });
+
+            console.log(res);
 
             console.log("Token being sent:", token);
 
@@ -60,8 +66,6 @@ const TourReview = ({ tour }) => {
               console.log(result.message);
             }
             alert('Your review Submitted')
-            setReview(result);
-
           } catch (error) {
             console.log(error.message);
           }
@@ -70,19 +74,20 @@ const TourReview = ({ tour }) => {
 
   return (
     <div>
-         <h4 className='mt-4'>Reviews ({tour.ratingsQuantity} reviews)</h4>
+         <h4 className='mt-4'>Reviews ({tour.ratingsQuantity})</h4>
                       <form className='mt-5' onSubmit={handleReviewSubmit}>
                         <span className='userrating' >
                         <ReactStars
                          count={5} 
                          size={30}
-                         onChange={handleReviewChange}/> 
+                         value={tourReview.rating}
+                         onChange={handleRatingChange} />
                         </span>
-                      <textarea placeholder="Write a comment..." className='review-input' onChange={handleReviewChange}/>
+                      <textarea placeholder="Write a comment..." id='review' className='review-input' onChange={handleReviewChange}/>
                       <button type="submit" className='review-button'>Submit</button>
                       </form>
                       <div className="review-list mt-5">
-                        <GetReview review = {review}/>
+                        <GetReview tour = {tour}/>
       </div>
     </div>
   )

@@ -1,9 +1,8 @@
 import React, { useContext, useState } from 'react'
 import './booking.css'
 import { Authcontext } from '../Context/AuthContext'
-import { useNavigate, useParams } from 'react-router-dom'
+import {  useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL, token } from '../utils/config'
-
 
 export const Booking = ({ tour }) => {
 

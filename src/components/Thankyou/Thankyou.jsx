@@ -4,6 +4,7 @@ import { SiTicktick } from "react-icons/si";
 import { Link } from 'react-router-dom';
 
 const Thankyou = () => {
+
   return (
     <div>
         <div className="div mt-5">

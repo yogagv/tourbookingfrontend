@@ -5,7 +5,7 @@ import useFetch from '../hooks/useFetch'
 import { BASE_URL } from '../utils/config'
 import { useParams } from 'react-router-dom'
 
-const GetReview = ({review}) => {
+const GetReview = ({tour}) => {
 
     const { id } = useParams();
 

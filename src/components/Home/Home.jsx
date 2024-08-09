@@ -83,7 +83,7 @@ const Home = () => {
 
       }
 
-        navigate(`/tour/filter/${city}/${distance}/${maxGroupSize}`);
+        navigate(`/tour/filter/${city}`);
 
     } catch(error){
 
