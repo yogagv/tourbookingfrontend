@@ -18,7 +18,8 @@ const GetReview = ({tour}) => {
 
     const getLatestReview = (review) => {
       if (!review || review.length === 0) return null;     
-      const sortedReviews = review.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const reviewsArray = Array.isArray(review) ? review : [];
+      const sortedReviews = reviewsArray.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       return sortedReviews[0];
     }
       const latestReview = getLatestReview(tourData);
