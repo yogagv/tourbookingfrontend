@@ -11,6 +11,8 @@ import { BASE_URL } from '../utils/config';
 import './singletour.css'
 import { Booking } from '../Booking/Booking';
 import TourReview from '../TourReview/TourReview';
+import Loading from '../Loading/Loading';
+
 
 const SingleTour = () => {
 
@@ -29,7 +31,7 @@ const SingleTour = () => {
   return (
     <div>
 
-{loading && <h1>Loading</h1>}
+{loading && <h1>{<Loading />}</h1>}
     {error && <h1>Error</h1>}
 
     {

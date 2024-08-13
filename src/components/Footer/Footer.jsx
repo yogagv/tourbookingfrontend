@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../assets/images/logo-white.png'
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -9,11 +9,47 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import maletourist from '../../assets/images/male-tourist.png';
+import emailjs from '@emailjs/browser';
 import './footer.css'
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
+  const [email, setEmail] = useState('')
+
+  const handleChange = (e) => {
+
+    setEmail((prev)=> ({ ...prev, [e.target.id]: e.target.value}));
+  }
+  
+  const handleSubmit = (e) => {
+
+      e.preventDefault();
+
+  }
+
+  const serviceId = 'service_y46mqkn';
+  const templateId = 'template_nbmjhgo';
+  const publicKey = '19kVTUMBE9SMtfr-b';
+
+
+  const templateParams = {
+
+    from_email: email,
+    to_name:'MayurasTours'
+  }
+
+  emailjs.send(serviceId, templateId, templateParams, publicKey)
+  .then((response)=>{
+    console.log('Email sent successfully', response);
+    setEmail('');
+  })
+  .catch((error)=>{
+    console.log(error.message);
+  })
+
+  
+  
   return (
     <div>
     <div className='footer_one'>
@@ -21,8 +57,10 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-6 mt-5">
               <h2>Subscribe now for <br/> Useful travelling information.</h2>
-              <input type="text"  placeholder='Enter your Email' className="subscribe-input mt-3"/>
-              <button className="subscribe-button">Subscribe</button>
+              <form onSubmit={handleSubmit}>
+              <input type="text"  placeholder='Enter your Email' className="subscribe-input mt-3" id='email' onChange={handleChange}/>
+              <input type='submit' className="subscribe-button" placeholder='Subscribe'/>
+              </form>
               <p className='mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et purus ultrices ligula dignissim sagittis ac nec ex. 
               Pellentesque lectus metus, hendrerit quis purus ut, ullamcorper mattis ante. </p>
           </div>
