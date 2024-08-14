@@ -2,20 +2,19 @@ import React, { useContext } from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from "../../assets/images/logo-white.png";
 import { Link, useNavigate } from 'react-router-dom';
-import { Authcontext } from '../Context/AuthContext';
+import { AuthContext } from '../Context/AuthContext';
 import './header.css'
 
 const Header = () => {
 
-  const {user, dispatch} = useContext(Authcontext);
+  const { user, dispatch } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const logout = () => {
+      dispatch({ type: "LOGOUT" });
+      navigate("/");
+    };
 
-        dispatch({ type: "LOGOUT"});
-        navigate("/")
-
-    }
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>

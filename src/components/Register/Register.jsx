@@ -60,6 +60,7 @@ const Register = () => {
     email: undefined,
     password: undefined,
     phone: undefined
+    
   })
 
   const navigate = useNavigate();

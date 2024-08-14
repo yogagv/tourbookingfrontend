@@ -3,7 +3,7 @@ import user from '../../assets/images/user.png';
 import login from '../../assets/images/login.png';
 import { Link, useNavigate } from 'react-router-dom';
 import './signin.css';
-import { Authcontext } from '../Context/AuthContext';
+import { AuthContext } from '../Context/AuthContext';
 import { BASE_URL } from '../utils/config';
 
 
@@ -12,11 +12,11 @@ const Signin = () => {
       const [credentials, setCredentials] = useState({
 
         email: undefined,
-        password: undefined
+        password: undefined,
 
       })
 
-      const { dispatch } = useContext(Authcontext);
+      const { dispatch } = useContext(AuthContext);
       const navigate = useNavigate();
 
       const handleChange = (e) => {
@@ -29,7 +29,7 @@ const Signin = () => {
 
           e.preventDefault();
 
-          dispatch({type: "LOGIN_START"});
+          dispatch({ type: "LOGIN_START" });
 
           try{
 
@@ -52,17 +52,14 @@ const Signin = () => {
               type: "LOGIN_SUCCESS",
               payload: result.data,
               token: result.token,
-              role: result.role
+              role: result.role,
             });
 
             navigate("/tour")
 
           }catch(error){
             
-              dispatch({
-              type: "LOGIN_FAILURE",
-              payload: error.message
-            });
+            dispatch({ type: "LOGIN_FAILURE", payload: error.message });
 
           }
 

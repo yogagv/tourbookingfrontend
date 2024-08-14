@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import './tourreview.css'
-import { Authcontext } from '../Context/AuthContext'
+import { AuthContext } from '../Context/AuthContext'
 import {  useParams } from 'react-router-dom'
 import { BASE_URL, token } from '../utils/config'
 import ReactStars from 'react-stars';
@@ -19,7 +19,7 @@ const TourReview = ({ tour }) => {
 
       console.log(typeof review)
 
-      const { user } = useContext(Authcontext);
+      const { user } = useContext(AuthContext);
 
 
       const handleReviewChange = (e) => {

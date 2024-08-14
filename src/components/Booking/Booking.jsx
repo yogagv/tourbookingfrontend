@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import './booking.css'
-import { Authcontext } from '../Context/AuthContext'
+import { AuthContext } from '../Context/AuthContext'
 import {  useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL, token } from '../utils/config'
 
@@ -15,7 +15,7 @@ export const Booking = ({ tour }) => {
 
     })
 
-    const { user } = useContext(Authcontext);
+    const { user } = useContext(AuthContext);
     const navigate = useNavigate();
 
 
