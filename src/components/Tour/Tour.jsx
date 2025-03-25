@@ -1,4 +1,4 @@
-import React  from 'react'
+import React, { useState }  from 'react'
 import useFetch from '../hooks/useFetch';
 import './tour.css';
 import { Card } from 'react-bootstrap';
